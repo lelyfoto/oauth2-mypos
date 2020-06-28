@@ -1,0 +1,28 @@
+{
+    "name": "lelyfoto/oauth2-mypos",
+    "description": "MyPos Provider for OAuth 2.0 Client",
+    "homepage": "https://github.com/lelyfoto/oauth2-mypos",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Lelyfoto / Michael Erkens",
+            "email": "info@lelyfoto.nl"
+        }
+    ],
+    "keywords": [
+        "oauth2",
+        "client",
+        "authorization",
+        "mypos",
+        "api"
+    ],
+    "require": {
+        "php": "^7.4",
+        "league/oauth2-client": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lelyfoto\\OAuth2\\Client\\": "src/"
+        }
+    }
+}
