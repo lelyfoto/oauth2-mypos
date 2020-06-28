@@ -13,10 +13,12 @@ class MyPos extends GenericProvider
 {
     protected const MYPOS_AUTH_URL = 'https://auth-api.mypos.com/oauth/';
 
-    public function __construct(array $options = [], array $collaborators = [])
+    public function __construct(string $clientId, string $clientSecret)
     {
         $collaborators['optionProvider'] = new HttpBasicAuthOptionProvider();
 
+        $options['clientId'] = $clientId;
+        $options['clientSecret'] = $clientSecret;
         $options['urlAccessToken'] = self::MYPOS_AUTH_URL . 'token';
         $options['urlAuthorize'] = self::MYPOS_AUTH_URL . 'authorize';
         $options['urlResourceOwnerDetails'] = self::MYPOS_AUTH_URL;
